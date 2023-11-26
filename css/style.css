@@ -1,1 +1,352 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+:root {
+  --Soft_Cyan: hsl(174, 77%, 80%);
+  --Strong_Cyan: hsl(174, 86%, 45%);
+  --Light_Grayish_Red: hsl(14, 92%, 95%);
+  --Light_Red: hsl(15, 100%, 70%);
+  --Pale_Blue: hsl(226, 100%, 87%);
+  --White: hsl(0, 2%, 9%);
+  --Very-Pale-Blue: hsl(230, 22%, 16%);
+  --Light-Grayish-Blue_text: hsl(224, 65%, 95%);
+  --Light-Grayish-Blue_Toggle: hsl(223, 50%, 87%);
+  --Grayish_Blue: hsl(225, 20%, 60%);
+  --Dark-Desaturated-Blue: hsl(227, 35%, 25%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--Very-Pale-Blue);
+  background-image: url(../images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  height: 40rem;
+}
+
+.paragraph {
+  color: var(--Grayish_Blue);
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.conteiner {
+  overflow: hidden;
+  padding: 2rem;
+  min-height: 100vh;
+  background-image: url(../images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: top 6rem center;
+  background-size: 16rem;
+}
+.conteiner header {
+  max-width: 45rem;
+}
+.conteiner header .title, .conteiner header .paragraph {
+  text-align: center;
+}
+.conteiner header .title {
+  font-size: 2rem;
+  color: var(--Dark-Desaturated-Blue);
+}
+.conteiner header .paragraph {
+  min-width: 40rem;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  padding: 0 10rem;
+  line-height: 2.3rem;
+}
+.conteiner .card-price {
+  overflow: hidden;
+  padding: 3rem 2.2rem 3rem 2.2rem;
+  border-radius: 0.8rem;
+  margin-top: 5rem;
+  width: 100%;
+  background-color: var(--White);
+  box-shadow: 0 0.5rem 2.5rem rgba(0, 0, 0, 0.1);
+}
+.conteiner .card-price .box-range {
+  /*********** Baseline, reset styles ***********/
+  /* Removes default focus */
+  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
+  /* slider track */
+  /* slider thumb */
+  /*********** Firefox styles ***********/
+  /* slider track */
+  /* slider thumb */
+}
+.conteiner .card-price .box-range .paragraph {
+  text-align: center;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.conteiner .card-price .box-range #rangePriceViews {
+  margin-top: 3rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+.conteiner .card-price .box-range input[type=range]:focus {
+  outline: none;
+}
+.conteiner .card-price .box-range input[type=range]::-webkit-slider-runnable-track {
+  background-color: #a5f3eb;
+  border-radius: 0.8rem;
+  height: 0.7rem;
+}
+.conteiner .card-price .box-range input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -13.1px; /* Centers thumb on the track */
+  background-color: #10d5c2;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2rem;
+  border-radius: 5rem;
+  height: 3.3rem;
+  width: 3.3rem;
+}
+.conteiner .card-price .box-range input[type=range]:focus::-webkit-slider-thumb {
+  outline: 3px solid #10d5c2;
+  outline-offset: 0.125rem;
+}
+.conteiner .card-price .box-range input[type=range]::-moz-range-track {
+  background-color: #a5f3eb;
+  border-radius: 0.8rem;
+  height: 0.4rem;
+}
+.conteiner .card-price .box-range input[type=range]::-moz-range-thumb {
+  background-color: #10d5c2;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+.conteiner .card-price .box-range input[type=range]:focus::-moz-range-thumb {
+  outline: 3px solid #10d5c2;
+  outline-offset: 0.125rem;
+}
+.conteiner .card-price .box-range .box-price {
+  margin-top: 3rem;
+  flex-direction: row;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+}
+.conteiner .card-price .box-range .box-price #price {
+  color: var(--Light-Grayish-Blue_text);
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+.conteiner .card-price .box-range .box-price .paragraph {
+  text-transform: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.conteiner .card-price .box-option {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 3rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  flex-direction: row;
+  min-width: 30rem;
+}
+.conteiner .card-price .box-option .toggle-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.conteiner .card-price .box-option .toggle-container .switch {
+  position: relative;
+  display: inline-block;
+  width: 39px;
+  height: 20px;
+}
+.conteiner .card-price .box-option .toggle-container .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.conteiner .card-price .box-option .toggle-container .switch input:checked + .slider {
+  background-color: var(--Strong_Cyan);
+}
+.conteiner .card-price .box-option .toggle-container .switch input:checked + .slider:before {
+  transform: translateX(19px);
+}
+.conteiner .card-price .box-option .toggle-container .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--Light-Grayish-Blue_Toggle);
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conteiner .card-price .box-option .toggle-container .switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 2.1px;
+  background-color: white;
+  transition: 0.4s;
+}
+.conteiner .card-price .box-option .toggle-container .switch .slider i {
+  color: #fff;
+}
+.conteiner .card-price .box-option .toggle-container .switch .slider.round {
+  border-radius: 34px;
+}
+.conteiner .card-price .box-option .toggle-container .switch .slider.round:before {
+  border-radius: 50%;
+}
+.conteiner .card-price .box-option .paragraph {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.conteiner .card-price .box-option .paragraph .discount {
+  padding: 0.1rem 0.6rem;
+  margin-left: 0.4rem;
+  border-radius: 2rem;
+  background-color: var(--Light_Grayish_Red);
+  color: var(--Light_Red);
+  font-size: 1rem;
+  font-weight: 800;
+}
+.conteiner .card-price .card-footer {
+  border-top: 1px solid var(--Light-Grayish-Blue_Toggle);
+  margin-top: 3.5rem;
+  padding-top: 3rem;
+}
+.conteiner .card-price .card-footer .conteiner-offers {
+  row-gap: 1rem;
+}
+.conteiner .card-price .card-footer .conteiner-offers .offers {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1.4rem;
+       column-gap: 1.4rem;
+}
+.conteiner .card-price .card-footer .conteiner-offers .offers img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.conteiner .card-price .card-footer .conteiner-offers .offers .paragraph {
+  font-size: 1.2rem;
+}
+.conteiner .card-price .card-footer button {
+  margin-top: 3rem;
+  width: 18rem;
+  height: 4.5rem;
+  border-radius: 3rem;
+  border: none;
+  background-color: var(--Strong_Cyan);
+  color: var(--White);
+  font-weight: 600;
+  font-family: "Manrope", sans-serif;
+}
+
+@media (min-width: 430px) {
+  .conteiner header .title {
+    font-size: 2.7rem;
+  }
+  .conteiner header .paragraph {
+    font-size: 1.35rem;
+    padding: 0;
+  }
+  .conteiner .card-price .card-footer {
+    padding-top: 3.5rem;
+    flex-direction: row;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    align-items: flex-start;
+  }
+  .conteiner .card-price .card-footer .conteiner-offers {
+    width: 23rem;
+    align-items: flex-start;
+    flex: 1;
+    row-gap: 1.4rem;
+  }
+  .conteiner .card-price .card-footer .conteiner-offers .offers .paragraph {
+    font-size: 1.3rem;
+  }
+  .conteiner .card-price .card-footer button {
+    margin-top: 0;
+  }
+}
+@media (min-width: 620px) {
+  .conteiner header .title {
+    font-size: 3.2rem;
+  }
+  .conteiner header .paragraph {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+  }
+  .conteiner .card-price {
+    max-width: 54rem;
+    padding: 3.5rem 4rem 3rem 4rem;
+  }
+  .conteiner .card-price .box-range {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+  }
+  .conteiner .card-price .box-range .paragraph {
+    justify-self: start;
+    align-self: center;
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+    grid-row: 1;
+    grid-column: 1/6;
+  }
+  .conteiner .card-price .box-range .box-price {
+    justify-self: end;
+    margin-top: 0;
+    grid-row: 1;
+    grid-column: 8/-1;
+  }
+  .conteiner .card-price .box-range .box-price #price {
+    font-size: 3.3rem;
+  }
+  .conteiner .card-price .box-range .box-price .paragraph {
+    font-size: 1.5rem;
+  }
+  .conteiner .card-price .box-range #rangePriceViews {
+    margin-top: 3.8rem;
+    grid-row: 2;
+    grid-column: 1/-1;
+  }
+  .conteiner .card-price .box-option {
+    margin-top: 4.8rem;
+  }
+  .conteiner .card-price .card-footer {
+    align-items: center;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,28 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Frontend Mentor | Interactive pricing component</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-RLc+0lGE5x5FZ5R0qJowArjsSnu+Hu3z5ejFIhR4D02N1z7C5miqr5noS8szQ4LQVKL8EezGLMFpRO11XKrXDHg==" crossorigin="anonymous" />
+		<link rel="stylesheet" href="./css/style.css">
+		<title>Frontend Mentor | Interactive pricing component</title>
+	</head>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+	<body>
+		<main class="content-center conteiner">
+			<header>
+				<h1 class="title">Simple, traffic-based pricing</h1>
+				<p class="paragraph">Sign-up for our 30-day trial. No credit card required.</p>
+			</header>
 
-  Pageviews
-  $ /month
+			<div class="card-price">
+				<div class="box-range">
+					<p class="paragraph" id="Pageviews"> <span class="text">Pageviews</span></p>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+					<input type="range" id="rangePriceViews" name="rangePriceViews" list="valores" min="0" max="100" step="1">
+					<datalist id="valores">
+						<option value="10000">10K</option>
+						<option value="50000">50K</option>
+						<option value="100000">100K</option>
+						<option value="500000">500K</option>
+						<option value="1000000">1M</option>
+					</datalist>
 
-  Unlimited websites
-  100% data ownership
-  Email reports
+					<div class="content-center box-price">
+						<p id="price">&dollar;</p> 
+						<p class="paragraph" id="factureMesAnio">/month</p>
+					</div>
+				</div>
+				
+				<div class="content-center box-option">
+					<p class="paragraph">Monthly Billing</p>
 
-  Start my trial
-  
-</body>
+					<div class="toggle-container">
+						<label class="switch">
+							<input role="checkbox" type="checkbox" id="toggle" checked>
+							<span class="slider round">
+								<i class="fas fa-power-off"></i>
+							</span>
+						</label>
+					</div>
+
+					<p class="paragraph">Yearly Billing <span class="discount">-25%</span></p>
+				</div>				
+			
+				<div class="card-footer content-center">
+					<ul class="conteiner-offers content-center">
+						<li class="offers"><img src="./images/icon-check.svg" alt="icon-check"><p class="paragraph">Unlimited websites</p></li>
+						<li class="offers"><img src="./images/icon-check.svg" alt="icon-check"><p class="paragraph">100% data ownership</p></li>
+						<li class="offers"><img src="./images/icon-check.svg" alt="icon-check"><p class="paragraph">Email reports</p></li>
+					</ul>
+
+					<button>Start my trial</button>
+				</div>
+			</div>
+		</main>
+		<script src="./js/app.js"></script>	
+	</body>
 </html>
